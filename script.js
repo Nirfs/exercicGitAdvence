@@ -6,6 +6,9 @@ const border = "yellow";
 const text = "purple";
 
 body.style.backgroundColor = background_color;
+body.style.height = "100vh"
+body.style.width = "100vh"
+
 button.style.backgroundColor = background_color;
 button.style.color = text;
 button.style.border = `4px solid ${border}`;
