@@ -3,7 +3,7 @@ const body = document.querySelector("body");
 
 const background_color = "cyan";
 const border = "yellow";
-const text = "black";
+const text = "purple";
 
 body.style.backgroundColor = background_color;
 button.style.backgroundColor = background_color;
