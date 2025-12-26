@@ -1,5 +1,9 @@
 const button = document.querySelector("button");
 
-button.style.backgroundColor = 'red';
-button.style.color = 'white';
-button.style.border = `4px solid blue`;
+const background = "red";
+const border = "blue";
+const text = "white";
+
+button.style.backgroundColor = background;
+button.style.color = text;
+button.style.border = `4px solid ${border}`;
