@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Répertoire relatif pour stocker les infos
+INFO_PATH="suivi"
+INFO_FILE="$INFO_PATH/commitInfo.txt"
+
+# Créer le dossier s'il n'existe pas
+mkdir -p $INFO_PATH
+
+# Question interactive
+read -p "Voulez-vous enregistrer les infos de ce commit ? (y/[n]) " yn < /dev/tty
+yn=${yn:-n}
+
+case $yn in
+  [Yy]* )
+    DATE=$(date +"%Y-%m-%d %H:%M:%S")
+    echo "commit vérifié le $DATE" > $INFO_FILE
+    git add $INFO_FILE
+    ;;
+  [Nn]* | "" )
+    # Rien à faire si n ou entrée
+    ;;
+esac
+
+exit 0
